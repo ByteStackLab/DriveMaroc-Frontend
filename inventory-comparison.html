@@ -98,6 +98,127 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Play:wght@400;700&amp;display=swap"
       rel="stylesheet"
     />
+    <style>
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: #fff;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      }
+      .comparison-table th,
+      .comparison-table td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #eee;
+      }
+      .comparison-table th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+      }
+      .comparison-table tr:hover {
+        background-color: #f5f5f5;
+      }
+      .car-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      }
+      .remove-car {
+        color: #dc3545;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+      .add-car-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .car-details {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+      }
+      .car-details h4 {
+        margin: 15px 0 10px;
+        font-size: 18px;
+      }
+      .car-details .price {
+        color: #068FFF;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    </style>
+    <style>
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+      .comparison-table th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+      }
+      .comparison-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+      .comparison-table tr:hover {
+        background-color: #f5f5f5;
+      }
+      .car-select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .comparison-wrapper {
+        padding: 40px 0;
+      }
+      .comparison-header {
+        margin-bottom: 30px;
+      }
+      .car-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      .highlight {
+        background-color: #e8f4fd !important;
+      }
+      .remove-car {
+        color: #dc3545;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      .add-car-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      .add-car-btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
     <link rel="stylesheet" href="assets/css/app.min.css" />
     <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -355,6 +476,7 @@
                 <li><a href="blog-details.html">Blog Details</a></li>
               </ul>
             </li> -->
+            <li><a href="finance-calculator.html">Finance Calculator</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -600,13 +722,11 @@
                 <li><a href="error.html">Error Page</a></li>
               </ul> -->
                     </li>
-                    <!-- <li class="menu-item-has-children">
-              <a href="#">Blog</a>
-              <ul class="sub-menu">
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="blog-details.html">Blog Details</a></li>
-              </ul>
-            </li> -->
+                    <li><a href="inventory-grid.html">Buy A Car</a></li>
+                    <li><a href="dealership-list.html">Dealership</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="finance-calculator.html">Finance Calculator</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                   </ul>
                 </nav>
@@ -651,46 +771,67 @@
     </div>
     <div class="inventory-comparison-area-1 space space-extra-bottom">
       <div class="container">
-        <div class="row gy-4 mb-4 justify-content-center">
+        <div class="row gy-4 mb-5 justify-content-center">
           <div class="col-lg-4 col-md-6">
             <div class="title-area mt-4 pt-lg-4">
               <h2 class="sec-title">Feature Vehicles Comparison</h2>
             </div>
           </div>
+          <!-- First Vehicle -->
           <div class="col-lg-4 col-md-6">
             <div class="feature-list-1 compare">
               <div class="box-icon">
-                <img src="assets/img/featured/featured-1-1.jpg" alt="image" />
+                <img src="assets/img/featured/featured-1-1.jpg" alt="Toyota Land Cruiser" />
                 <div class="actions">
-                  <a href="#" class="icon-btn"
-                    ><i class="fa-solid fa-trash-can"></i
-                  ></a>
+                  <a href="#" class="icon-btn">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </a>
                 </div>
               </div>
               <div class="car-content">
                 <div class="media-body">
                   <h3 class="box-title">
-                    <a href="single-inventory.html">Ford Explorer XLT</a>
+                    <a href="single-inventory.html">Toyota Land Cruiser</a>
                   </h3>
                   <p class="box-text">
-                    <span>Listed by:</span> Motor lane Automotive
+                    <span>Listed by:</span> DriveMaroc Premium Motors
                   </p>
                 </div>
-                <div class="car-bottom"><h6 class="box-title">$17,000</h6></div>
+                <div class="car-bottom">
+                  <h6 class="box-title">$85,000.00</h6>
+                </div>
               </div>
             </div>
           </div>
+          <!-- Second Vehicle -->
           <div class="col-lg-4 col-md-6">
-            <div class="add-compare-wrap">
-              <div class="add-compare">
-                <div class="compare-icon">
-                  <img src="assets/img/icon/compare-icon.svg" alt="icon" />
+            <div class="feature-list-1 compare">
+              <div class="box-icon">
+                <img src="assets/img/featured/featured-1-2.jpg" alt="Mercedes-Benz C-Class" />
+                <div class="actions">
+                  <a href="#" class="icon-btn">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </a>
                 </div>
               </div>
-              <p class="box-text mt-4 text-center">Add Car to Compare</p>
+              <div class="car-content">
+                <div class="media-body">
+                  <h3 class="box-title">
+                    <a href="single-inventory.html">Mercedes-Benz C-Class</a>
+                  </h3>
+                  <p class="box-text">
+                    <span>Listed by:</span> DriveMaroc Luxury Auto
+                  </p>
+                </div>
+                <div class="car-bottom">
+                  <h6 class="box-title">$45,000.00</h6>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Comparison Grid -->
         <div class="row gy-3 mb-3">
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
@@ -699,15 +840,16 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
-              <div class="item"><p class="title">C-Class - 2024</p></div>
+              <div class="item"><p class="title">Toyota Land Cruiser</p></div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
-              <div class="item"><p class="title"></p></div>
+              <div class="item"><p class="title">Mercedes-Benz C-Class</p></div>
             </div>
           </div>
         </div>
+
         <div class="row gy-3 mb-3">
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
@@ -721,10 +863,11 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
-              <div class="item"><p class="title"></p></div>
+              <div class="item"><p class="title">New</p></div>
             </div>
           </div>
         </div>
+
         <div class="row gy-4 mb-4">
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
@@ -733,15 +876,16 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
-              <div class="item"><p class="title">car</p></div>
+              <div class="item"><p class="title">SUV</p></div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
-              <div class="item"><p class="title"></p></div>
+              <div class="item"><p class="title">Sedan</p></div>
             </div>
           </div>
         </div>
+
         <div class="row gy-4 mb-4">
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
@@ -752,6 +896,247 @@
             <div class="compare-item-wrap">
               <div class="item"><p class="title">SUV</p></div>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">Sedan</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Color</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">White Pearl</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">Obsidian Black</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Door</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">5 Doors</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">4 Doors</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">VIN</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">TLC202415</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">MBC202415</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Offer Type</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">Premium</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">Featured</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Price</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">$85,000.00</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">$45,000.00</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Length</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">4950mm</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">4750mm</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Height</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">1945mm</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">1440mm</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Width</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">1980mm</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">1820mm</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Wheelbase</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">2850mm</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title">2865mm</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-3 mb-3" data-feature="condition">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Condition</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title"></p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title"></p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4" data-feature="category">
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title-left">Category</p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title"></p></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="compare-item-wrap">
+              <div class="item"><p class="title"></p></div>
+            </div>
+          </div>
+        </div>
+            <tbody>
+              <tr>
+                <td>Brand</td>
+              </tr>
+              <tr>
+                <td>Model</td>
+              </tr>
+              <tr>
+                <td>Year</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+              </tr>
+              <tr>
+                <td>Mileage</td>
+              </tr>
+              <tr>
+                <td>Transmission</td>
+              </tr>
+              <tr>
+                <td>Fuel Type</td>
+              </tr>
+              <tr>
+                <td>Engine</td>
+              </tr>
+              <tr>
+                <td>Color</td>
+              </tr>
+              <tr>
+                <td>Body Style</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="compare-item-wrap">
